@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="568.819" viewBox="0 0 1920 568.819">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_18145" data-name="Rectangle 18145" width="1920" height="565.819" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_87401" data-name="Group 87401" transform="translate(0 -2146.887)">
+    <text id="_2016" data-name="2016" transform="translate(790 2160)" font-size="12" font-family="SFProDisplay-Bold, SF Pro Display" font-weight="700" opacity="0.998"><tspan x="-14" y="0">2016</tspan></text>
+    <g id="Group_87394" data-name="Group 87394" transform="translate(0 2149.887)">
+      <g id="Group_87393" data-name="Group 87393" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_130" data-name="Path 130" d="M0,0s632.764,16.84,766.6,38.521,176.689,36,176.689,36v49.677L781.277,149.03,253.265,241.86,0,198.918Z" transform="translate(0 0.003)" fill="#6d6d6d"/>
+        <path id="Path_131" data-name="Path 131" d="M721.4,182.6S408,81.565,0,104.3V229.546L247.1,308.9S513.6,192.708,596.957,189.34,721.4,182.6,721.4,182.6" transform="translate(0 -54.621)" fill="#606060"/>
+        <path id="Path_132" data-name="Path 132" d="M1285.808,54.1s485.2-51.125,702.683-4.394,394.4,58.308,394.4,58.308v48.836l-280.52,11.984-616.357-31.666Z" transform="translate(-462.891 -16.24)" fill="#606060"/>
+        <path id="Path_133" data-name="Path 133" d="M1337.816,144.037s26.415-22.639-33.459-38.426-106.542-23.366-106.542-23.366,51.07-5.683,103.02,5.683,99.917,23.835,84.152,45.808Z" transform="translate(-431.213 -43.724)" fill="#fff"/>
+        <path id="Path_134" data-name="Path 134" d="M1525.6,220.342s-422.205-90.935-804.2,5.894L578.207,220.47C382.6,212.592,186.639,230.456,0,273.177H0v390.9H1525.6Z" transform="translate(0 -98.253)" fill="#3f3f3f"/>
+        <path id="Path_135" data-name="Path 135" d="M2452.636,244.483s-184.058-115.844-973.091,142.074l333.323,296.65h639.768Z" transform="translate(-532.636 -118.229)" fill="#303030"/>
+        <path id="Path_136" data-name="Path 136" d="M1008.61,714.623S1252.071,569.38,952.7,494.863,255.333,343.3,500.115,289c0,0,59.288-19.787,373.923-12.209L686.2,301.4s-90.4,25.906,19.958,44.43S1214.5,438.449,1214.5,438.449s507.174,96.829,247.717,276.174Z" transform="translate(-152.636 -148.804)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_87395" data-name="Group 87395" transform="translate(807 2146.887)">
+      <rect id="Rectangle_18146" data-name="Rectangle 18146" width="0.955" height="41.03" transform="translate(1.268 0.897)" fill="#ae8b3b"/>
+      <path id="Path_137" data-name="Path 137" d="M0,0V18.676L26.316,8.065Z" fill="#ae8b3b"/>
+    </g>
+    <g id="Group_87396" data-name="Group 87396" transform="translate(1027.89 2226.516)">
+      <rect id="Rectangle_18146-2" data-name="Rectangle 18146" width="6.077" height="261.041" transform="translate(8.065 5.701)" fill="#ae8b3b"/>
+      <path id="Path_137-2" data-name="Path 137" d="M0,0V118.818l167.426-67.51Z" fill="#ae8b3b"/>
+    </g>
+    <g id="Group_87397" data-name="Group 87397" transform="translate(380.142 2188.813)">
+      <rect id="Rectangle_18146-3" data-name="Rectangle 18146" width="3.245" height="139.403" transform="translate(4.307 3.045)" fill="#ae8b3b"/>
+      <path id="Path_137-3" data-name="Path 137" d="M0,0V63.453L89.411,27.4Z" fill="#ae8b3b"/>
+    </g>
+    <path id="Path_138" data-name="Path 138" d="M2354.226-19960.187s149.445,26.373,120.527,53.4" transform="translate(-1544 22149)" fill="none" stroke="#707070" stroke-width="0.5" stroke-dasharray="4"/>
+    <path id="Path_139" data-name="Path 139" d="M2164.037-19858.609s-128.538-7.932-225.8,29.883,617.615,165.99,617.615,165.99,269.54,47.211,106.974,229.012" transform="translate(-1544 22149)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="7"/>
+    <text id="_2020" data-name="2020" transform="translate(332 2236)" fill="#fff" font-size="27" font-family="SFProDisplay-Bold, SF Pro Display" font-weight="700" opacity="0.998"><tspan x="-33" y="0">2020</tspan></text>
+    <text id="_2025" data-name="2025" transform="translate(960 2302)" fill="#fff" font-size="47" font-family="SFProDisplay-Bold, SF Pro Display" font-weight="700" opacity="0.998"><tspan x="-58" y="0">2025</tspan></text>
+  </g>
+</svg>
