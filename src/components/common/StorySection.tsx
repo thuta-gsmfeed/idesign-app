@@ -74,10 +74,9 @@ const StorySection = () => {
                     <div
                         // ✅ FIX: Adjusted mobile max-width to match image
                         className="
-                            bg-[#EDE5D4]/95
-                            backdrop-blur-[40px]
+                            bg-[#EDE5D4]/90
+                            backdrop-blur-sm
                             rounded-[48px]
-                            shadow-2xl
                             p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 2xl:p-12
                             w-full
                             max-w-md
@@ -86,9 +85,7 @@ const StorySection = () => {
                             mx-auto lg:mx-0
 
                         "
-                        style={{
-                            opacity: "90%"
-                        }}
+                        /* MODIFIED: Removed redundant inline opacity style */
                     >
                         {/* Added dark mode text color */}
                         <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-[#B8860B] dark:text-[#EBB639]">

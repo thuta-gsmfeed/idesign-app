@@ -57,20 +57,20 @@ const FeatureTextCard = ({ title, paragraphs }: { title: string, paragraphs: str
 // Reusable Image Component
 const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
     <div className="flex justify-center w-full lg:w-auto lg:flex-shrink-0">
-        <Image
+        <img
             src={src}
             alt={alt}
             className="
                 rounded-2xl shadow-2xl object-cover
-                w-full max-w-[350px]
-                sm:max-w-[400px]
-                md:max-w-[500px]
+                w-full
+                max-w-[500px] /* MODIFIED: Matched card's mobile max-width */
+                sm:max-w-[550px] /* MODIFIED: Matched card's mobile max-width */
+                md:max-w-[650px] /* MODIFIED: Matched card's mobile max-width */
                 lg:max-w-[550px] lg:w-[550px]
                 xl:max-w-[650px] xl:w-[650px]
                 2xl:max-w-[754px] 2xl:w-[754px]
             "
             // Using the original aspect ratio from StorySection as a default.
-            // You can change this per-image if needed.
             style={{ aspectRatio: '754 / 623' }}
 
         />
@@ -79,18 +79,20 @@ const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
 
 const ProductFeaturesSection = () => {
     // Shared section padding with reduced 'py' values
-    const sectionPadding = "py-12 px-6 sm:py-16 sm:px-8 md:py-20 md:px-12 lg:py-24 lg:px-16 xl:py-28 xl:px-24 2xl:py-32 2xl:px-32";
+    const sectionPadding = "py-8 px-6 sm:py-12 sm:px-8 md:py-16 md:px-12 lg:py-20 lg:px-16 xl:py-24 xl:px-24 2xl:py-28 2xl:px-32";
 
     return (
         <>
             {/* Section 1: Craftsmanship (Image Left, Text Right) */}
             <section className={`relative overflow-hidden bg-white ${sectionPadding}`}>
-                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-0 max-w-[1920px] mx-auto">
+                {/* MODIFIED: Removed mobile gap */}
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:gap-0 max-w-[1920px] mx-auto">
                     {/* Image Container */}
                     <FeatureImage src="/images/product-1.png" alt="World-Class Craftsmanship & Customization" />
 
                     {/* Text Card Container */}
-                    <div className="w-full lg:w-auto lg:flex-shrink-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24">
+                    {/* MODIFIED: Added mobile negative margin for overlap & centering */}
+                    <div className="w-full lg:w-auto lg:flex-shrink-0 -mt-16 sm:-mt-24 md:-mt-32 lg:mt-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24 mx-auto lg:mx-0">
                         <FeatureTextCard title={feature1.title} paragraphs={feature1.paragraphs} />
                     </div>
                 </div>
@@ -98,15 +100,18 @@ const ProductFeaturesSection = () => {
 
             {/* Section 2: Frame (Text Left, Image Right) */}
             <section className={`relative overflow-hidden bg-white ${sectionPadding}`}>
-                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-0 max-w-[1920px] mx-auto">
+                {/* MODIFIED: Removed mobile gap */}
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:gap-0 max-w-[1920px] mx-auto">
 
                     {/* Text Card Container (Comes first in JSX) */}
-                    <div className="w-full lg:w-auto lg:flex-shrink-0 relative z-10">
+                    {/* MODIFIED: Added centering */}
+                    <div className="w-full lg:w-auto lg:flex-shrink-0 relative z-10 mx-auto lg:mx-0">
                         <FeatureTextCard title={feature2.title} paragraphs={feature2.paragraphs} />
                     </div>
 
                     {/* Image Container (Comes second, with negative margin) */}
-                    <div className="flex justify-center w-full lg:w-auto lg:flex-shrink-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24">
+                    {/* MODIFIED: Added mobile negative margin for overlap */}
+                    <div className="flex justify-center w-full lg:w-auto lg:flex-shrink-0 -mt-16 sm:-mt-24 md:-mt-32 lg:mt-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24">
                         <FeatureImage src="/images/product-2.png" alt="The Perfect Frame of Luxury" />
                     </div>
                 </div>
@@ -114,12 +119,14 @@ const ProductFeaturesSection = () => {
 
             {/* Section 3: Elegance (Image Left, Text Right) */}
             <section className={`relative overflow-hidden bg-white ${sectionPadding}`}>
-                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-0 max-w-[1920px] mx-auto">
+                {/* MODIFIED: Removed mobile gap */}
+                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:gap-0 max-w-[1920px] mx-auto">
                     {/* Image Container */}
                     <FeatureImage src="/images/product-3.png" alt="Presented in Pure Elegance" />
 
                     {/* Text Card Container */}
-                    <div className="w-full lg:w-auto lg:flex-shrink-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24">
+                    {/* MODIFIED: Added mobile negative margin for overlap & centering */}
+                    <div className="w-full lg:w-auto lg:flex-shrink-0 -mt-16 sm:-mt-24 md:-mt-32 lg:mt-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24 mx-auto lg:mx-0">
                         <FeatureTextCard title={feature3.title} paragraphs={feature3.paragraphs} />
                     </div>
                 </div>
@@ -129,3 +136,4 @@ const ProductFeaturesSection = () => {
 };
 
 export default ProductFeaturesSection;
+

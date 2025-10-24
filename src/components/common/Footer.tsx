@@ -61,6 +61,9 @@ export default function Footer() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.1 }}
+                style={{
+                    paddingBottom: 8,
+                }}
             >
                 {/* 4. ANIMATION: Added item variant to this section */}
                 <motion.div
@@ -281,7 +284,9 @@ export default function Footer() {
                 alt="Decorative gold wave background"
                 // Using negative bottom positioning as requested
                 // Added 2xl breakpoint as well
-                className="absolute -bottom-[10%] sm:-bottom-[10%] md:-bottom-[25%] lg:-bottom-[45%] xl:-bottom-[65%] 2xl:-bottom-[120%] left-0 right-0 w-full h-auto object-cover object-bottom z-0"
+                // className="absolute -bottom-[10%] sm:-bottom-[10%] md:-bottom-[25%] lg:-bottom-[45%] xl:-bottom-[65%] 2xl:-bottom-[120%] left-0 right-0 w-full h-auto object-cover object-bottom z-0"
+                className="absolute -bottom-[6%] sm:-bottom-[10%] md:-bottom-[25%] lg:-bottom-[50%] xl:-bottom-[70%] 2xl:-bottom-[132%] left-0 right-0 w-full h-auto object-cover object-bottom z-0"
+
             />
         </footer>
     );

@@ -64,7 +64,7 @@ const itemVariants: Variants = {
 export default function FeaturesGrid() {
     return (
         // RESPONSIVE: Added responsive padding, dark mode
-        <div className="w-full flex items-center justify-center px-6 sm:px-8 md:px-12 bg-white dark:bg-gray-950"
+        <div className="w-full flex items-center justify-center px-6 sm:px-8 md:px-12 bg-white dark:bg-gray-950 py-5"
              style={{ fontFamily: 'Poppins, sans-serif' }}
         >
             {/* 3. ANIMATION: Added motion.div wrapper with variants */}
