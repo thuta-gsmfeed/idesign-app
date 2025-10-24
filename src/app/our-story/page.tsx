@@ -3,6 +3,7 @@ import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import JourneyTimeline from "@/components/common/JourneyTimeline";
 import StorySection from "@/components/common/StorySection";
+import JoinTheLegacy from "@/components/common/JoinTheLegacy";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
             <StorySection />
             <FeaturesGrid />
             <JourneyTimeline />
+            <JoinTheLegacy />
             <Footer />
         </main>
     );

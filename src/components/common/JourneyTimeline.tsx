@@ -1,54 +1,53 @@
-"use client";
+"use client"; // Required for framer-motion
 
 import React from 'react';
-import Image from "next/image"; // Now we are using this
+// 1. Import motion
+import { motion, Variants } from "framer-motion";
+
+// 2. Define animation variants
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+        },
+    },
+};
 
 export default function JourneyTimeline() {
     return (
-        <div className="w-full bg-gray-50 py-16">
+        // FIX 1: Changed min-h-screen to h-screen to make it a fixed full height
+        <div className="w-full bg-gray-50 dark:bg-gray-900 overflow-hidden h-full flex flex-col"
+             style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
 
-            {/* --- Start: Constrained Text Content --- */}
-            <div className="max-w-6xl mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h1 className="text-5xl font-serif text-[#ae8b3b] mb-6">Our Journey</h1>
-                    <p className="text-gray-700 max-w-3xl mx-auto mb-4 leading-relaxed">
-                        From a small creative studio in 2016 to a global brand serving high-profile personalities across
-                        continents, IDG has become a symbol of prestige in personal technology.
-                    </p>
-                    <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                        Our team of designers, engineers, and artisans work tirelessly to redefine what a luxury smartphone can
-                        be. Each year, we introduce new finishes, patterns, and engraving options — expanding the boundaries of
-                        personalization while staying true to our heritage of excellence.
-                    </p>
-                </div>
-            </div>
-            {/* --- End: Constrained Text Content --- */}
-
-
-            {/* --- Start: Full-Width Image Section --- */}
-            {/* This div is now outside max-w-6xl, so it can be full-width */}
-            {/* This div is now just a simple wrapper */}
-            <div className="w-full my-16">
-                <Image
-                    src="/images/our-journey.svg"
-                    alt="Our journey timeline visualization"
-                    width={1920}  // Give a base width (e.g., the SVG's design width)
-                    height={600}  // Give a base height (adjust this to match the SVG)
-                    className="w-full h-auto" // This makes it responsive
-                />
-            </div>
-            {/* --- End: Full-Width Image Section --- */}
-
-
-            {/* --- Start: Constrained Text Content --- */}
-            <div className="max-w-6xl mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-5xl font-serif text-[#ae8b3b] mb-6">Join The Legacy</h2>
-                    <p className="text-gray-700 max-w-3xl mx-auto leading-relaxed mb-12">
-                        Our goal is simple — to make luxury personal again. Whether you&#39;re a global celebrity or a passionate
-                        individual with an eye for perfection, IDG invites you to design the device that defines you.
-                    </p>
-                </div>
+            {/* FIX 2: Created a wrapper for text content that grows to fill space */}
+            <div className="flex-1 pt-16 md:pt-20">
+                {/* --- Start: Constrained Text Content --- */}
+                {/* 3. ANIMATION: Added motion wrapper */}
+                <motion.div
+                    className="max-w-6xl mx-auto px-4"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={itemVariants}
+                >
+                    <div className="text-center mb-12">
+                        <h1 className="text-5xl text-[#ae8b3b] dark:text-[#EBB639] mb-6">Our Journey</h1>
+                        <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
+                            From a small creative studio in 2016 to a global brand serving high-profile personalities across
+                            continents, IDG has become a symbol of prestige in personal technology.
+                        </p>
+                        <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            Our team of designers, engineers, and artisans work tirelessly to redefine what a luxury smartphone can
+                            be. Each year, we introduce new finishes, patterns, and engraving options — expanding the boundaries of
+                            personalization while staying true to our heritage of excellence.
+                        </p>
+                    </div>
+                </motion.div>
 
                 <div className="text-center">
                     <blockquote
@@ -64,9 +63,31 @@ export default function JourneyTimeline() {
                         your story is plated in gold.&#34;
                     </blockquote>
                 </div>
+                {/* --- End: Constrained Text Content --- */}
             </div>
-            {/* --- End: Constrained Text Content --- */}
+
+
+            {/* --- Start: Full-Width Image Section --- */}
+            {/* 3. ANIMATION: Added motion wrapper */}
+            {/* FIX 3: Removed vertical margin (my-12) so it sits at the bottom */}
+            <motion.div
+                className="w-full"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={itemVariants}
+            >
+                {/* FIX: Replaced 'next/image' with a standard 'img' tag */}
+                {/* ✅ FIX: Added specific height for mobile, reset to auto for larger screens */}
+                <img
+                    src="/images/our-journey.png"
+                    alt="Our journey timeline visualization"
+                    className="w-full h-full object-cover sm:object-contain dark:invert" // Increased mobile height
+                />
+            </motion.div>
+            {/* --- End: Full-Width Image Section --- */}
 
         </div>
     );
 }
+

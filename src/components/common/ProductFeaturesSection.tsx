@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 // Content for the three new sections
 const feature1 = {
@@ -56,7 +57,7 @@ const FeatureTextCard = ({ title, paragraphs }: { title: string, paragraphs: str
 // Reusable Image Component
 const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
     <div className="flex justify-center w-full lg:w-auto lg:flex-shrink-0">
-        <img
+        <Image
             src={src}
             alt={alt}
             className="
@@ -71,6 +72,7 @@ const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
             // Using the original aspect ratio from StorySection as a default.
             // You can change this per-image if needed.
             style={{ aspectRatio: '754 / 623' }}
+
         />
     </div>
 );

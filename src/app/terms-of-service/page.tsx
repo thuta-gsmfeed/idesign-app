@@ -1,12 +1,13 @@
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
-import ContactForm from "@/components/common/ContactForm";
+import TermsOfService from "@/components/common/TermsOfService";
+
 
 export default function Home() {
     return (
         <main className="overflow-x-hidden">
             <Navbar />
-            <ContactForm />
+            <TermsOfService />
             <Footer />
         </main>
     );

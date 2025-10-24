@@ -1,6 +1,8 @@
-"use client";
+"use client"; // Required for framer-motion
 
-import Image from "next/image";
+import React from 'react';
+// 1. Import motion
+import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 interface Product {
@@ -49,39 +51,79 @@ const products: Product[] = [
     },
 ];
 
+// 2. Define animation variants
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1, // Stagger each card
+        },
+    },
+};
+
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut",
+        },
+    },
+};
+
 const ProductLists = () => {
     return (
-        <section className="py-16 bg-white text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#bfa14a] mb-10">
+        // RESPONSIVE: Added responsive padding, dark mode bg
+        <section className="py-16 md:py-20 bg-white dark:bg-gray-950 text-center overflow-hidden">
+            {/* 3. ANIMATION: Added motion to heading */}
+            <motion.h2
+                className="text-2xl md:text-3xl font-semibold text-[#bfa14a] dark:text-[#EBB639] mb-10"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+            >
                 Not Just a Phone. A Statement.
-            </h2>
+            </motion.h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+            {/* 3. ANIMATION: Added motion to grid container */}
+            <motion.div
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            >
                 {products.map((product) => (
-                    <div
+                    // 3. ANIMATION: Added motion to each grid item
+                    <motion.div
                         key={product.id}
                         className="flex flex-col items-center text-center group"
+                        variants={itemVariants}
                     >
-                        <div className="relative w-48 h-56 md:w-56 md:h-64 mb-4">
-                            <Image
+                        {/* RESPONSIVE: Adjusted height for better spacing */}
+                        <div className="relative w-full h-64 md:h-72 mb-4">
+                            {/* FIX: Replaced next/image with standard img tag */}
+                            <img
                                 src={product.img}
                                 alt={product.title}
-                                fill
-                                className="object-contain transition-transform duration-300 group-hover:scale-105"
-                                priority
+                                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
                             />
                         </div>
-                        <h3 className="font-medium text-gray-800">{product.title}</h3>
-                        <p className="text-gray-600 text-sm mt-1">{product.price}</p>
+                        <h3 className="font-medium text-gray-800 dark:text-gray-100">{product.title}</h3>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{product.price}</p>
                         <Button
                             variant="ghost"
-                            className="mt-3 bg-[#f8f4ea] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-white transition-all"
+                            className="mt-3 bg-[#f8f4ea] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-white dark:bg-gray-800 dark:text-[#EBB639] dark:hover:bg-[#EBB639] dark:hover:text-black transition-all"
                         >
                             Buy
                         </Button>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 };

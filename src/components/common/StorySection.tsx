@@ -1,5 +1,8 @@
+"use client"; // Required for framer-motion
+
 import React from 'react';
-import Image from "next/image";
+// 1. Import motion
+import { motion } from "framer-motion";
 
 const StorySection = () => {
     const story = {
@@ -13,65 +16,96 @@ const StorySection = () => {
     };
 
     return (
-        <section className="relative overflow-hidden bg-white py-20 px-6 sm:py-24 sm:px-8 md:py-28 md:px-12 lg:py-32 lg:px-16 xl:py-36 xl:px-24 2xl:py-40 2xl:px-32">
-            <Image
+        // RESPONSIVE: Adjusted padding to be more consistent
+        // ✅ FIX: Added Poppins font family
+        <section
+            className="relative overflow-hidden bg-white dark:bg-gray-950 py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+            {/* ✅ FIX: Replaced next/image with <img> */}
+            {/* ✅ FIX: Added responsive negative bottom positioning */}
+            <img
                 src="/images/bar.png"
                 alt="Decorative gold wave background"
-                fill
-                className="object-cover object-center z-0"
-                priority
+                // Using negative bottom positioning as requested
+                // Added 2xl breakpoint as well
+                className="absolute bottom-[30%] sm:-bottom-[10%] md:bottom-[-30%] lg:-bottom-[0%] xl:-bottom-[0%] 2xl:-bottom-[70%] left-0 right-0 w-full h-auto object-cover object-bottom
+                 z-0"
             />
 
-            {/* FIX: Removed lg:gap-*, xl:gap-*, 2xl:gap-* Kept mobile gap for flex-col stacking.
-            */}
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-0 max-w-[1920px] mx-auto">
+            {/* RESPONSIVE: Changed max-w-[1920px] to max-w-7xl to align with other sections */}
+            {/* ✅ FIX: Removed mobile gap to allow for vertical overlap */}
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:gap-0 max-w-7xl mx-auto">
 
-                {/* Image Container */}
-                <div className="flex justify-center w-full lg:w-auto lg:flex-shrink-0">
+                {/* 2. ANIMATION: Image Container (slides from left) */}
+                <motion.div
+                    className="flex justify-center w-full lg:w-auto lg:flex-shrink-0"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >
                     <img
                         src="/images/messi.png"
                         alt="Lionel Messi and Ben"
+                        // ✅ FIX: Adjusted mobile max-width to match text card
                         className="
-                            rounded-2xl shadow-2xl object-cover
-                            w-full max-w-[350px]
-                            sm:max-w-[400px]
-                            md:max-w-[500px]
+                            rounded-[40px] shadow-2xl object-cover
+                            w-full max-w-md
                             lg:max-w-[550px] lg:w-[550px]
                             xl:max-w-[650px] xl:w-[650px]
-                            2xl:max-w-[754px] 2xl:w-[754px]
                         "
+                        // 2K/1440px size will be handled by the lg/xl fallbacks
                         style={{ aspectRatio: '754 / 623' }}
                     />
-                </div>
+                </motion.div>
 
-                {/* Text Card Container */}
-                <div className="w-full lg:w-auto lg:flex-shrink-0 lg:-ml-8 xl:-ml-16 2xl:-ml-24">
+                {/* 2. ANIMATION: Text Card Container (slides from right) */}
+                {/* ✅ FIX: Added negative top margin for mobile overlap, reset on desktop */}
+                <motion.div
+                    // ✅ FIX: Added mx-auto for mobile centering
+                    className="w-full lg:w-auto lg:flex-shrink-0 -mt-16 sm:-mt-24 md:-mt-32 lg:mt-0 lg:-ml-8 xl:-ml-16 mx-auto lg:mx-0"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >
+                    {/* ✅ FIX: Updated styles to match Adobe XD specs */}
                     <div
+                        // ✅ FIX: Adjusted mobile max-width to match image
                         className="
-                            rounded-2xl bg-gradient-to-br from-[#FBF9F3]/95 to-[#F5F2E8]/95
-                            backdrop-blur-sm shadow-2xl
+                            bg-[#EDE5D4]/95
+                            backdrop-blur-[40px]
+                            rounded-[48px]
+                            shadow-2xl
                             p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 2xl:p-12
                             w-full
-                            max-w-[500px] sm:max-w-[550px] md:max-w-[650px]
+                            max-w-md
                             lg:max-w-[600px] lg:w-[600px]
                             xl:max-w-[750px] xl:w-[750px]
-                            2xl:max-w-[890px] 2xl:w-[890px]
                             mx-auto lg:mx-0
+
                         "
+                        style={{
+                            opacity: "90%"
+                        }}
                     >
-                        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-bold text-[#B8860B]">
+                        {/* Added dark mode text color */}
+                        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-[#B8860B] dark:text-[#EBB639]">
                             {story.title}
                         </h2>
-                        <div className="space-y-3 md:space-y-3.5 lg:space-y-4 text-xs sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base text-gray-700 leading-relaxed">
+                        {/* Added dark mode text color */}
+                        <div className="space-y-3 md:space-y-3.5 lg:space-y-4 text-xs sm:text-sm md:text-base lg:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                             {story.paragraphs.map((text, index) => (
                                 <p key={index}>{text}</p>
                             ))}
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
 };
 
 export default StorySection;
+
