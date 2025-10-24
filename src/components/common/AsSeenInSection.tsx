@@ -91,12 +91,12 @@ const AsSeenInSection = () => {
                                 className="flex-shrink-0"
                                 variants={logoVariants}
                             >
-                                <Image
+                                <img
                                     src={logo.src}
                                     alt={logo.alt}
                                     className="h-20 md:h-24 w-auto object-contain dark:invert"
-                                    width={1}
-                                    height={12}
+                                    // width={1}
+                                    // height={12}
                                 />
                             </motion.div>
                         ))}
@@ -109,12 +109,12 @@ const AsSeenInSection = () => {
                                     className="flex-shrink-0"
                                     aria-hidden="true"
                                 >
-                                    <Image
+                                    <img
                                         src={logo.src}
                                         alt={logo.alt}
                                         className="h-20 w-auto object-contain dark:invert"
-                                        width={1}
-                                        height={12}
+                                        // width={1}
+                                        // height={12}
                                     />
                                 </div>
                             ))}
