@@ -82,7 +82,7 @@ const itemVariants: Variants = {
     },
 };
 
-const ProductLists = () => {
+const AccessoriesLists = () => {
     return (
         // RESPONSIVE: Added responsive padding, dark mode bg
         <section className="py-16 md:py-20 bg-white dark:bg-gray-950 text-center overflow-hidden">
@@ -94,7 +94,7 @@ const ProductLists = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                Not Just a Phone. A Statement.
+                Not Just a Accessories. A Statement.
             </motion.h2>
 
             {/* 3. ANIMATION: Added motion to grid container */}
@@ -138,4 +138,4 @@ const ProductLists = () => {
     );
 };
 
-export default ProductLists;
+export default AccessoriesLists;

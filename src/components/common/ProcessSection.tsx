@@ -101,7 +101,7 @@ export default function ProcessSection() {
                 <motion.div
                     // FIX: Changed space-x-6 to space-x-8 for more mobile gap
                     // FIX: Changed sm:gap-10 to sm:gap-16
-                    className="flex overflow-x-auto space-x-8 px-4 sm:px-6 lg:px-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-16 sm:space-x-0 pb-4 sm:pb-0"
+                    className="flex overflow-x-auto space-x-8 px-4 sm:px-6 lg:px-8 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-16 sm:space-x-0 pb-4 sm:pb-10"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"

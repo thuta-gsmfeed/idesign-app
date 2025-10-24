@@ -5,6 +5,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const sectionVariants: Variants = {
     hidden: { opacity: 0 },
@@ -31,8 +32,8 @@ const itemVariants: Variants = {
 
 const ShopSection = () => {
     const items = [
-        { title: "Shop iPhone", img: "/images/phone.png" },
-        { title: "Shop Accessories", img: "/images/headphone.png" },
+        { title: "Shop iPhone", img: "/images/phone.png", link: "/iphones" },
+        { title: "Shop Accessories", img: "/images/headphone.png", link: "/accessories" },
     ];
 
     return (
@@ -53,25 +54,29 @@ const ShopSection = () => {
                         {/* Image container */}
                         {/* FIX 1: Increased container height from h-[350px] md:h-[450px] */}
                         <div className="h-[450px] md:h-[550px] flex items-center justify-center">
-                            <Image
-                                src={item.img}
-                                alt={item.title}
-                                // FIX 2: Increased width and height props for better quality at the new size
-                                // (Maintaining roughly the same aspect ratio)
-                                width={310}
-                                height={550}
-                                className="object-contain h-full"
-                            />
+                            <Link href={item.link} >
+                                <Image
+                                    src={item.img}
+                                    alt={item.title}
+                                    // FIX 2: Increased width and height props for better quality at the new size
+                                    // (Maintaining roughly the same aspect ratio)
+                                    width={310}
+                                    height={550}
+                                    className="object-contain h-full transition-transform duration-300 ease-in-out hover:scale-105"
+                                />
+                            </Link>
                         </div>
 
                         {/* Button with hover animations */}
-                        <Button
-                            className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex items-center"
-                            style={{ fontFamily: 'Poppins, sans-serif' }}
-                        >
-                            {item.title}
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
+                        <Link href={item.link}>
+                            <Button
+                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex items-center"
+                                style={{ fontFamily: 'Poppins, sans-serif' }}
+                            >
+                                {item.title}
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
                     </motion.div>
                 ))}
             </motion.div>

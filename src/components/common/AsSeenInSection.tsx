@@ -78,7 +78,7 @@ const AsSeenInSection = () => {
                         className={`flex flex-nowrap items-center gap-x-12 gap-y-8 ${
                             isMobile
                                 ? "animate-marquee group-hover:[animation-play-state:paused]"
-                                : "flex-wrap justify-center md:gap-x-16 lg:gap-x-20"
+                                : "flex-wrap justify-center md:gap-x-16 lg:gap-x-36"
                         }`}
                         variants={containerVariants}
                         initial="hidden"

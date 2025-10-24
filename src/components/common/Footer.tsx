@@ -4,6 +4,7 @@ import React from "react"; // Replaced next/image
 // 1. Import motion
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerFeatures = [
     {
@@ -138,46 +139,46 @@ export default function Footer() {
                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-px
                        before:bg-gradient-to-r before:from-transparent before:via-[#ae8b3b] before:to-transparent before:content-['']
                        md:before:hidden">
-                                <a
-                                    href="#iphone-collection"
+                                <Link
+                                    href="/iphones"
                                     // Adjusted padding for new border
                                     className="text-sm font-medium text-black dark:text-gray-200 hover:text-[#B8935E] dark:hover:text-[#B8935E] transition-colors px-3 py-4 md:py-2 block"
                                 >
                                     iPhone Collection
-                                </a>
+                                </Link>
                             </li>
                             <li className="relative w-auto text-center md:w-auto
                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-px
                        before:bg-gradient-to-r before:from-transparent before:via-[#ae8b3b] before:to-transparent before:content-['']
                        md:before:hidden">
-                                <a
-                                    href="#accessories"
+                                <Link
+                                    href="/accessories"
                                     className="text-sm font-medium text-black dark:text-gray-200 hover:text-[#B8935E] dark:hover:text-[#B8935E] transition-colors px-3 py-4 md:py-2 block"
                                 >
                                     Accessories
-                                </a>
+                                </Link>
                             </li>
                             <li className="relative w-auto text-center md:w-auto
                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-px
                        before:bg-gradient-to-r before:from-transparent before:via-[#ae8b3b] before:to-transparent before:content-['']
                        md:before:hidden">
-                                <a
-                                    href="#our-story"
+                                <Link
+                                    href="/our-story"
                                     className="text-sm font-medium text-black dark:text-gray-200 hover:text-[#B8935E] dark:hover:text-[#B8935E] transition-colors px-3 py-4 md:py-2 block"
                                 >
                                     Our Story
-                                </a>
+                                </Link>
                             </li>
                             <li className="relative w-auto text-center md:w-auto
                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-px
                        before:bg-gradient-to-r before:from-transparent before:via-[#ae8b3b] before:to-transparent before:content-['']
                        md:before:hidden">
-                                <a
-                                    href="#terms"
+                                <Link
+                                    href="/terms-of-service"
                                     className="text-sm font-medium text-black dark:text-gray-200 hover:text-[#B8935E] dark:hover:text-[#B8935E] transition-colors px-3 py-4 md:py-2 block"
                                 >
                                     Terms of Service
-                                </a>
+                                </Link>
                             </li>
                             <li className="relative w-auto text-center md:w-auto
                        before:absolute before:bottom-0 before:left-0 before:w-full before:h-px

@@ -51,7 +51,8 @@ const HeroSection = () => {
                     <img
                         src="/images/gold-iphone.png"
                         alt="Gold iPhone"
-                        className="w-[180px] md:w-[300px] h-auto"
+                        // ✅ HOVER EFFECT ADDED
+                        className="w-[180px] md:w-[300px] h-auto transition-transform duration-300 ease-in-out hover:scale-105"
                     />
                 </motion.div>
 
@@ -96,18 +97,21 @@ const HeroSection = () => {
                 </motion.div>
             </div>
 
+            {/* MODIFIED: Removed 'group' from parent div */}
             <motion.div
-                className="relative z-10 max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 items-center px-4 pt-16 md:pt-[50px]"
+                className="relative z-10 max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 items-center px-4 pt-24 md:pt-[80px]"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
                 viewport={{ once: true }}
             >
+                {/* MODIFIED: Removed group-hover classes from wrapper */}
                 <div className="w-full col-span-2 md:col-span-3">
                     <img
                         src="/images/ronaldinho.png"
                         alt="Celebrity holding gold iPhone"
-                        className="w-full h-[320px] md:h-[520px] lg:h-[520px] rounded-2xl object-cover"
+                        // MODIFIED: Added individual hover effect
+                        className="w-full h-[320px] md:h-[520px] lg:h-[520px] rounded-2xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"
                     />
                 </div>
 
@@ -115,12 +119,14 @@ const HeroSection = () => {
                     <img
                         src="/images/hero-section.png"
                         alt="Gold iPhone closeup"
-                        className="w-full md:w-[350px] h-[350px] md:h-[250px] lg:h-[250px] rounded-2xl object-cover"
+                        // MODIFIED: Added individual hover effect and removed group-hover
+                        className="w-full md:w-[350px] h-[350px] md:h-[250px] lg:h-[250px] rounded-2xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"
                     />
                     <img
                         src="/images/hero-section-2.png"
                         alt="Gold iPhone closeup"
-                        className="w-full md:w-[350px] h-[350px] md:h-[250px] lg:h-[250px] rounded-2xl object-cover"
+                        // MODIFIED: Added individual hover effect and removed group-hover
+                        className="w-full md:w-[350px] h-[350px] md:h-[250px] lg:h-[250px] rounded-2xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"
                     />
                 </div>
             </motion.div>
@@ -129,3 +135,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
