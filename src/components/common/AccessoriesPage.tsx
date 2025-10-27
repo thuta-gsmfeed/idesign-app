@@ -130,7 +130,7 @@ export default function AccessoriesPage() {
 
                     {/* Storage options */}
                     <div>
-                        <h3 className="text-sm font-semibold mb-3">Storage</h3>
+                        <h3 className="text-sm mb-3">Storage</h3>
                         <div className="grid grid-cols-4 gap-3">
                             {storageOptions.map((storage) => (
                                 <button
@@ -150,7 +150,7 @@ export default function AccessoriesPage() {
 
                     {/* File upload */}
                     <div>
-                        <h3 className="text-sm font-semibold mb-3">File</h3>
+                        <h3 className="text-sm mb-3">File</h3>
                         <button className="w-full py-4 px-6 rounded-lg border-2 border-gray-300 hover:border-gray-400 flex items-center justify-between transition-all group">
                             <span className="text-sm font-medium">Upload logo file</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-gray-600 group-hover:text-gray-800" > <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <polyline points="17 8 12 3 7 8" /> <line x1="12" y1="3" x2="12" y2="15" /> </svg>
