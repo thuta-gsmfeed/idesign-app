@@ -91,7 +91,7 @@ const StorySection = () => {
                         /* MODIFIED: Removed redundant inline opacity style */
                     >
                         {/* Added dark mode text color */}
-                        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-[#B8860B] dark:text-[#EBB639]">
+                        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold text-[#ae8b3b] dark:text-[#EBB639]">
                             {story.title}
                         </h2>
                         {/* Added dark mode text color */}

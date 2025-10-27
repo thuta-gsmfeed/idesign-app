@@ -78,10 +78,15 @@ const Navbar = () => {
                             style={{
                                 backgroundColor: '#f8f5ee',
                                 color: '#a08d53',
+                                fontWeight: 'bold' // This will bold any text, but not the icon
                             }}
                             aria-label="Login"
                         >
-                            <User className="h-5 w-5 cursor-pointer ease-in-out  transition-transform duration-200 hover:scale-110" />
+                            {/* Add strokeWidth here to make the icon bolder */}
+                            <User
+                                className="h-5 w-5 cursor-pointer ease-in-out transition-transform duration-200 hover:scale-110"
+                                strokeWidth={2.5}
+                            />
                         </a>
 
                         {/* ... (Theme Toggle - no changes) ... */}

@@ -88,7 +88,7 @@ const AccessoriesLists = () => {
         <section className="py-16 md:py-20 bg-white dark:bg-gray-950 text-center overflow-hidden">
             {/* 3. ANIMATION: Added motion to heading */}
             <motion.h2
-                className="text-2xl md:text-3xl font-semibold text-[#bfa14a] dark:text-[#EBB639] mb-10"
+                className="text-2xl md:text-3xl font-semibold text-[#ae8b3b] dark:text-[#EBB639] mb-10"
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -128,7 +128,7 @@ const AccessoriesLists = () => {
                         <Link href={`/accessories/${product.slug}`}>
                             <Button
                                 variant="ghost"
-                                className="mt-3 bg-[#f8f4ea] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-white dark:bg-gray-800 dark:text-[#EBB639] dark:hover:bg-[#EBB639] dark:hover:text-black transition-all"
+                                className="mt-3 bg-[#f5f1e7] text-[#ae8b3b] hover:bg-[#bfa14a] hover:text-white dark:bg-gray-800 dark:text-[#EBB639] dark:hover:bg-[#EBB639] dark:hover:text-black transition-all"
                             >
                                 Buy
                             </Button>

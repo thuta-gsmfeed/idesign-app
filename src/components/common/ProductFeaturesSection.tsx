@@ -43,7 +43,7 @@ const FeatureTextCard = ({ title, paragraphs }: { title: string, paragraphs: str
             lg:min-h-[380px] xl:min-h-[420px] 2xl:min-h-[460px]
         "
     >
-        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-bold text-[#B8860B]">
+        <h2 className="mb-4 md:mb-5 lg:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-bold text-[#ae8b3b]">
             {title}
         </h2>
         <div className="space-y-3 md:space-y-3.5 lg:space-y-4 text-xs sm:text-sm md:text-base lg:text-base xl:text-base 2xl:text-base text-gray-700 leading-relaxed">

@@ -16,9 +16,21 @@ interface StorageOption {
     value: string;
 }
 const colorOptions: ColorOption[] = [
-    { id: 'gold', name: 'Gold', colorClass: 'bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600' },
-    { id: 'rose-gold', name: 'Rose Gold', colorClass: 'bg-gradient-to-br from-rose-700 via-amber-800 to-stone-800' },
-    { id: 'platinum', name: 'Platinum', colorClass: 'bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600' },
+    {
+        id: 'gold',
+        name: 'Gold',
+        colorClass: 'bg-gradient-to-br from-yellow-300 via-amber-500 to-yellow-600'
+    },
+    {
+        id: 'rose-gold',
+        name: 'Rose Gold',
+        colorClass: 'bg-gradient-to-br from-rose-200 via-rose-400 to-amber-700'
+    },
+    {
+        id: 'platinum',
+        name: 'Platinum',
+        colorClass: 'bg-gradient-to-br from-slate-100 via-slate-300 to-slate-500'
+    },
 ];
 const storageOptions: StorageOption[] = [
     { id: '256gb', value: '256 GB' },
@@ -92,7 +104,7 @@ export default function ProductPage() {
 
                 {/* --- Details section (no changes) --- */}
                 <div className="space-y-6 md:space-y-8 text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-yellow-600">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-[#ae8b3b]">
                         24k Gold iPhone 17 Pro Max
                     </h1>
 
@@ -101,12 +113,12 @@ export default function ProductPage() {
                         <div className="flex gap-4 sm:gap-8 mb-4 justify-center md:justify-start">
                             {colorOptions.map((color) => (
                                 <div key={color.id} className="text-center">
-                                    <p className="text-sm mb-2">{color.name}</p>
+                                    <p className="text-sm mb-4">{color.name}</p>
                                     <button
                                         onClick={() => setSelectedColor(color.id)}
                                         className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-lg transition-all ${color.colorClass} ${
                                             selectedColor === color.id
-                                                ? 'ring-4 ring-offset-2 ring-blue-500 scale-110'
+                                                ? 'ring-2 ring-offset-2 ring-[#ae8b3b] scale-110' // Changed from ring-4 to ring-2
                                                 : 'hover:scale-105'
                                         }`}
                                         aria-label={`Select ${color.name}`}
@@ -126,7 +138,7 @@ export default function ProductPage() {
                                     onClick={() => setSelectedStorage(storage.id)}
                                     className={`py-3 px-2 sm:px-4 rounded-lg border-2 text-sm font-medium transition-all ${
                                         selectedStorage === storage.id
-                                            ? 'border-blue-500 bg-blue-50 text-blue-700'
+                                            ? 'border-[#ae8b3b] bg-[#f8f5ee] text-[#ae8b3b]'
                                             : 'border-gray-300 hover:border-gray-400'
                                     }`}
                                 >
@@ -154,12 +166,12 @@ export default function ProductPage() {
                         >
                             Add to Cart
                         </button>
-                        <button
-                            onClick={handleBuyNow}
-                            className="w-full sm:w-auto px-10 py-3 bg-gray-800 hover:bg-black text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-xl"
-                        >
-                            Buy Now
-                        </button>
+                        {/*<button*/}
+                        {/*    onClick={handleBuyNow}*/}
+                        {/*    className="w-full sm:w-auto px-10 py-3 bg-gray-800 hover:bg-black text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-xl"*/}
+                        {/*>*/}
+                        {/*    Buy Now*/}
+                        {/*</button>*/}
                     </div>
 
                     {/* Important Notes */}
