@@ -159,7 +159,47 @@ const Navbar = () => {
                     ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}
                 `}
             >
-                {/* ... (nav items) ... */}
+                <nav>
+                    <ul className="flex flex-col items-center space-y-8">
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <a
+                                    href={item.href}
+                                    className="text-3xl font-medium hover:text-[#ae8b3b] transition-colors duration-150"
+                                    style={{ color: '#a08d53' }}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+
+                        <li>
+                            <a
+                                href="/login"
+                                className="text-3xl font-medium hover:text-[#ae8b3b] transition-colors duration-150"
+                                style={{ color: '#a08d53' }}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Login
+                            </a>
+                        </li>
+
+                        {/*<li className="pt-6">*/}
+                        {/* <ThemeToggle />*/}
+                        {/*</li>*/}
+
+                        <li
+                            className="p-3 rounded-2xl cursor-pointer" // Use 'p-3' instead of 'pt-3' to center
+                            style={{
+                                backgroundColor: '#ffffff', // White
+                                color: '#a08d53',
+                            }}
+                        >
+                            <ThemeToggle />
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
             {/* --- (NEW) Render the Cart Drawer --- */}

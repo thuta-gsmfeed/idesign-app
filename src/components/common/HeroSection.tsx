@@ -102,7 +102,7 @@ const HeroSection = () => {
                     >
                         <Link href="/iphones">
                             <Button
-                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
+                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between w-full"
                                 style={{ fontFamily: "Poppins, sans-serif" }}
                             >
                                 Shop iPhone
@@ -111,7 +111,7 @@ const HeroSection = () => {
                         </Link>
                         <Link href="/accessories">
                             <Button
-                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
+                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between w-full"
                                 style={{ fontFamily: "Poppins, sans-serif" }}
                             >
                                 Shop Accessories
