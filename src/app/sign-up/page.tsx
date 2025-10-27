@@ -8,6 +8,7 @@ import { Eye, EyeOff, ChevronDown, Search } from "lucide-react";
 // import Image from "next/image";
 // import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
 // --- FIX: Removed PhoneInput import to fix compilation error ---
 // CSS must be imported in your global styles: import 'react-phone-input-2/lib/style.css';
 // import PhoneInput from 'react-phone-input-2';
@@ -450,8 +451,10 @@ const SignUpPage = () => {
                     {/* Sign Up Button */}
                     {/* --- UI FIX: Updated gradient, font-bold, text-lg --- */}
                     <Button
-                        className="w-full mt-6 text-white font-bold text-lg py-6 rounded-xl bg-gradient-to-r from-[#D98D12] via-[#EBB639] to-[#EBB639]  hover:opacity-90 transition"
+                        className="w-full mt-6 text-white font-bold text-lg py-6 rounded-xl bg-gradient-to-r hover:opacity-90 transition"
                         type="submit"
+                        style={{backgroundImage:
+                                "linear-gradient(-60deg, #AE8B3B 0%, #EBB639 -93%, #D98D12 40%, #C08D41 100%)",}}
                     >
                         Sign up
                     </Button>
@@ -486,9 +489,9 @@ const SignUpPage = () => {
                 <p className="text-sm text-gray-600 mt-6">
                     Already have an Account?{" "}
                     {/* --- FIX: Replaced <Link> with <a>, updated text color/font --- */}
-                    <a href="/login" className="text-[#ae8b3b] font-bold hover:underline">
+                    <Link href="/login" className="text-[#ae8b3b] font-bold hover:underline">
                         Sign In
-                    </a>
+                    </Link>
                 </p>
 
                 {/* --- UI FIX: Removed bottom gold wave image for consistency --- */}

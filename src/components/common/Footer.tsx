@@ -5,6 +5,7 @@ import React from "react"; // Replaced next/image
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import {RegionCurrencyDropdown} from "@/components/common/RegionCurrencyDropdown";
 
 const footerFeatures = [
     {
@@ -211,15 +212,7 @@ export default function Footer() {
                         className="flex flex-wrap items-center justify-center gap-4"
                         variants={itemVariants}
                     >
-                        <button className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 rounded-md hover:bg-gray-200 transition-colors">
-                            <img
-                                src="https://flagcdn.com/w40/ae.png"
-                                alt="UAE flag"
-                                className="w-6 h-4 object-cover"
-                            />
-                            <span className="text-sm font-medium">GBP £</span>
-                            <ChevronDown className="w-4 h-4" />
-                        </button>
+                        <RegionCurrencyDropdown />
 
                         <div className="flex items-center gap-3">
                             {/* Added dark mode styles */}

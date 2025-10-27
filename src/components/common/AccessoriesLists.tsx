@@ -115,15 +115,17 @@ const AccessoriesLists = () => {
                         {/* RESPONSIVE: Adjusted height for better spacing */}
                         <div className="relative w-full h-64 md:h-72 mb-4">
                             {/* FIX: Replaced next/image with standard img tag */}
+                            <Link href={`/accessories/${product.slug}`}>
                             <img
                                 src={product.img}
                                 alt={product.title}
-                                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
+                                className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105 cursor-pointer"
                             />
+                            </Link>
                         </div>
                         <h3 className="font-medium text-gray-800 dark:text-gray-100">{product.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{product.price}</p>
-                        <Link href={`/products/${product.slug}`}>
+                        <Link href={`/accessories/${product.slug}`}>
                             <Button
                                 variant="ghost"
                                 className="mt-3 bg-[#f8f4ea] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-white dark:bg-gray-800 dark:text-[#EBB639] dark:hover:bg-[#EBB639] dark:hover:text-black transition-all"

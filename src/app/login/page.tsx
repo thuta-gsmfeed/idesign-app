@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
 // --- FIX: Replaced Next.js components with standard HTML ---
 // import Image from "next/image";
 // import Link from "next/link";
@@ -72,9 +73,11 @@ const LoginPage = () => {
                     {/* Sign In Button */}
                     {/* --- FIX: Updated gradient to use Tailwind classes instead of inline style --- */}
                     <Button
-                        className="w-full mt-6 text-white font-bold text-lg py-6 rounded-xl bg-gradient-to-r from-[#D98D12] via-[#EBB639] to-[#EBB639]  hover:opacity-90 transition"
+                        className="w-full mt-6 text-white font-bold text-lg py-6 rounded-xl hover:opacity-90 transition"
                         type="submit"
-
+                        style={{
+                            backgroundImage: "linear-gradient(-60deg, #AE8B3B 0%, #EBB639 -93%, #D98D12 40%, #C08D41 100%)"
+                        }}
                     >
                         Sign in
                     </Button>
@@ -120,9 +123,9 @@ const LoginPage = () => {
                 <p className="text-sm text-gray-600 mt-6">
                     Don’t have an account?{" "}
                     {/* --- FIX: Replaced <Link> with <a> --- */}
-                    <a href="/signup" className="text-[#ae8b3b] font-bold hover:underline">
+                    <Link href="/sign-up" className="text-[#ae8b3b] font-bold hover:underline">
                         Sign Up
-                    </a>
+                    </Link>
                 </p>
             </div>
             {/* --- FIX: Added missing closing tags --- */}

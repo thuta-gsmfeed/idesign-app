@@ -14,11 +14,11 @@ export default function TermsOfService() {
                 fontFamily: 'Poppins, sans-serif' // Assuming Poppins font
             }}
         >
-            <div className="max-w-7xl mx-auto shadow-lg">
-                <div className="mb-12 text-center">
-                    <h2 className="text-4xl font-bold text-[#ae8b3b] dark:text-[#EBB639] mb-4">Terms of service</h2>
-                </div>
 
+            <div className="mb-12 text-center">
+                <h2 className="text-4xl font-bold text-[#ae8b3b] dark:text-[#EBB639] mb-4">Terms of service</h2>
+            </div>
+            <div className="max-w-7xl mx-auto rounded-xl shadow-xl">
                 {/* Content Container */}
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-8 sm:p-10 md:p-12 shadow space-y-6">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">OVERVIEW</h3>

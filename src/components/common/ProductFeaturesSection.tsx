@@ -79,7 +79,7 @@ const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
 
 const ProductFeaturesSection = () => {
     // Shared section padding with reduced 'py' values
-    const sectionPadding = "py-8 px-6 sm:py-12 sm:px-8 md:py-16 md:px-12 lg:py-20 lg:px-16 xl:py-24 xl:px-24 2xl:py-28 2xl:px-32";
+    const sectionPadding = "py-4 px-6 sm:py-6 sm:px-8 md:py-8 md:px-12 lg:py-10 lg:px-16 xl:py-12 xl:px-24 2xl:py-14 2xl:px-32\n";
 
     return (
         <>

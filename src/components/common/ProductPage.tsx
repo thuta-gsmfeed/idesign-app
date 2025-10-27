@@ -45,7 +45,7 @@ export default function ProductPage() {
                 {/* --- FIX: Replaced Next.js <Image> component with standard <img> tag --- */}
                 <div className="flex justify-center w-full max-w-md mx-auto aspect-[3/4]">
                     <img
-                        src="/images/24K-Gold-Iphone-17-Promax.png"
+                        src="/images/product-detail.png"
                         alt="24k Gold iPhone 17 Pro Max"
                         className="w-full h-full object-contain"
                     />

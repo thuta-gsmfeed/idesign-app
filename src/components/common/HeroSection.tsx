@@ -63,16 +63,36 @@ const HeroSection = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                 >
+                    {/*<motion.h1*/}
+                    {/*    className="text-5xl md:text-5xl lg:text-7xl font-semibold leading-tight mb-4"*/}
+                    {/*    style={{*/}
+                    {/*        backgroundImage:*/}
+                    {/*            "linear-gradient(-80deg, #AE8B3B 0%, #EBB639 40%, #D98D12 55%, #C08D41 100%)",*/}
+                    {/*        WebkitBackgroundClip: "text",*/}
+                    {/*        WebkitTextFillColor: "transparent",*/}
+                    {/*    }}*/}
+                    {/*    variants={itemVariants}*/}
+                    {/*>*/}
+                    {/*    Everything <br/> We Touch <br/> Turns To Gold.*/}
+                    {/*</motion.h1>*/}
                     <motion.h1
                         className="text-5xl md:text-5xl lg:text-7xl font-semibold leading-tight mb-4"
                         style={{
-                            backgroundImage: "linear-gradient(#AE8B3B, #EBB639, #D98D12, #C08D41)",
+                            // The gradient
+                            backgroundImage:
+                                "linear-gradient(-80deg, #AE8B3B 0%, #EBB639 40%, #D98D12 55%, #C08D41 100%)",
+
+                            // --- Standard CSS properties ---
+                            backgroundClip: "text",
+                            color: "transparent",
+
+                            // --- Prefixed properties for older browsers ---
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }}
                         variants={itemVariants}
                     >
-                        Everything <br /> We Touch <br /> Turns To Gold.
+                        Everything <br/> We Touch <br/> Turns To Gold.
                     </motion.h1>
 
                     <motion.div

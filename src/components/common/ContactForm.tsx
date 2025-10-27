@@ -28,7 +28,7 @@ export default function ContactForm() {
 
     return (
         <section
-            className="bg-white dark:bg-gray-950 py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+            className="bg-white dark:bg-gray-950 pt-16 pb-10 md:py-16 px-4 sm:px-6 lg:px-8"
             style={{
                 backgroundImage: "url('/images/contact-us-gradiant-background.png')",
                 // RESPONSIVE: Set a fixed height for the background image
@@ -56,9 +56,9 @@ export default function ContactForm() {
                       This allows the box to take its natural, content-based height,
                       which works perfectly on all screen sizes.
                     */}
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-8 "
+                    <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg"
                     style={{
-                        boxShadow: '0px 32px 120px #947EA826;'
+                        // boxShadow: '0px 32px 120px #947EA826;'
                     }}>
                         <h3 className="text-xl font-semibold mb-4 dark:text-white">Thank you for your interest in IDG.</h3>
                         <p className="mb-6 dark:text-gray-300">
@@ -86,9 +86,9 @@ export default function ContactForm() {
 
                     {/* Form Section */}
                     {/* RESPONSIVE: This form layout with 'sm:flex-row' is already perfectly responsive */}
-                    <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-xl p-8 space-y-6"
+                    <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-xl p-8 space-y-6 shadow-lg"
                           style={{
-                              boxShadow: '0px 32px 120px #947EA826;'
+                              // boxShadow: '0px 32px 120px #947EA826;'
                           }}>
                         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-6 sm:space-y-0">
                             <div className="w-full space-y-2">
