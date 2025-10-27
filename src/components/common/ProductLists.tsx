@@ -99,7 +99,7 @@
 
                 {/* 3. ANIMATION: Added motion to grid container */}
                 <motion.div
-                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-16 max-w-6xl mx-auto px-4"
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-4"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -123,7 +123,7 @@
                                 />
                                 </Link>
                             </div>
-                            <h3 className="font-medium text-gray-800 dark:text-gray-100">{product.title}</h3>
+                            <h3 className="font-medium text-gray-800 dark:text-gray-100 text-sm">{product.title}</h3>
                             <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{product.price}</p>
                             <Link href={`/iphones/${product.slug}`}>
                                 <Button
