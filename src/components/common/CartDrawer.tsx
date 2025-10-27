@@ -62,15 +62,15 @@ export default function CartDrawer() {
                         </p>
                     </div>
                 ) : (
-                    // ... (Items list - no changes) ...
+                    // ... (Items list - MODIFIED image size) ...
                     <div className="flex-1 overflow-y-auto p-4 space-y-4">
                         {cartItems.map((item) => (
                             <div key={item.id} className="flex gap-4">
                                 <Image
                                     src={item.image}
                                     alt={item.name}
-                                    width={80}
-                                    height={100}
+                                    width={64} /* MODIFIED: Was 80 */
+                                    height={80} /* MODIFIED: Was 100 */
                                     className="rounded-lg object-cover border dark:border-gray-700 aspect-[4/5]"
                                 />
                                 <div className="flex-1 flex flex-col">
@@ -93,8 +93,8 @@ export default function CartDrawer() {
                                                 <Minus className="w-4 h-4" />
                                             </button>
                                             <span className="px-3 text-sm font-medium">
-                        {item.quantity}
-                      </span>
+                                                {item.quantity}
+                                            </span>
                                             <button
                                                 onClick={() => increaseQuantity(item.id)}
                                                 className="p-2 text-gray-600 hover:text-black dark:hover:text-white"
@@ -128,15 +128,20 @@ export default function CartDrawer() {
                             <span>${subtotal.toFixed(2)}</span>
                         </div>
 
+                        <p>
+                            Taxes and shipping calculated at checkout
+                        </p>
+
                         {/* --- (NEW) Button Container --- */}
-                        <div className="space-y-3">
+                        {/* MODIFIED: Increased from space-y-3 to space-y-4 */}
+                        <div className="space-y-4">
                             {/* "View Cart" Button */}
                             <Link href="/cart" passHref>
                                 <button
                                     onClick={closeCart} // Close drawer on click
                                     className="w-full py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700
                              text-gray-800 dark:text-white rounded-full font-semibold transition-all
-                             hover:bg-gray-50 dark:hover:bg-gray-700"
+                             hover:bg-gray-50 dark:hover:bg-gray-700 mb-4"
                                 >
                                     View Cart
                                 </button>

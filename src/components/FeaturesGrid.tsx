@@ -64,7 +64,7 @@ const itemVariants: Variants = {
 export default function FeaturesGrid() {
     return (
         // RESPONSIVE: Added responsive padding, dark mode
-        <div className="w-full flex items-center justify-center px-6 sm:px-8 md:px-12 bg-white dark:bg-gray-950 py-5"
+        <div className="w-full flex items-center justify-center px-6 sm:px-8 md:px-12 bg-white dark:bg-gray-950 py-9"
              style={{ fontFamily: 'Poppins, sans-serif' }}
         >
             {/* 3. ANIMATION: Added motion.div wrapper with variants */}
@@ -112,7 +112,7 @@ export default function FeaturesGrid() {
                         <motion.div
                             key={index}
                             // HOVER FIX: Added transition-colors, hover:bg-gray-50, and dark:hover:bg-gray-800
-                            className="relative bg-white dark:bg-gray-950 p-8 sm:p-10 md:p-12 flex flex-col items-center text-center transition-colors duration-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                            className="relative  dark:bg-gray-950 p-8 sm:p-10 md:p-12 flex flex-col items-center text-center transition-colors duration-300 hover:bg-gray-50 dark:hover:bg-gray-800"
                             variants={itemVariants}
                             // HOVER FIX: Added whileHover prop for a subtle scale effect
                             // whileHover={{ scale: 1.03 }}

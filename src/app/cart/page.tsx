@@ -36,7 +36,7 @@ export default function CartPage() {
                         <p className="mt-2 text-sm text-gray-500">
                             Looks like you haven&#39;t added anything yet.
                         </p>
-                        <Link href="/" passHref>
+                        <Link href="/iphones" passHref>
                             <button className="mt-8 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white
                                              rounded-full font-semibold transition-all shadow-lg hover:shadow-xl
                                              flex items-center gap-2">
@@ -174,7 +174,7 @@ export default function CartPage() {
                                     </Link>
 
                                     <div className="text-center mt-4">
-                                        <Link href="/" passHref>
+                                        <Link href="/iphones" passHref>
                                             <span className="flex items-center justify-center gap-2 text-sm text-blue-600 hover:underline cursor-pointer">
                                                 <ArrowLeft className="w-4 h-4" />
                                                 Continue Shopping

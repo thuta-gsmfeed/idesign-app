@@ -10,8 +10,10 @@ export default function Home() {
     return (
         <main className="overflow-x-hidden">
             <Navbar />
-            <StorySection />
-            <FeaturesGrid />
+            <section>
+                <StorySection />
+                <FeaturesGrid />
+            </section>
             <JourneyTimeline />
             <JoinTheLegacy />
             <Footer />

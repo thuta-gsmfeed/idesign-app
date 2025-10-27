@@ -99,7 +99,7 @@ const AccessoriesLists = () => {
 
             {/* 3. ANIMATION: Added motion to grid container */}
             <motion.div
-                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4"
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-16 max-w-6xl mx-auto px-4"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"

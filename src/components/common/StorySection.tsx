@@ -19,18 +19,21 @@ const StorySection = () => {
         // RESPONSIVE: Adjusted padding to be more consistent
         // ✅ FIX: Added Poppins font family
         <section
-            className="relative overflow-hidden bg-white dark:bg-gray-950 py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+            className="relative  bg-white dark:bg-gray-950 py-16 md:py-20 px-4 sm:px-6 lg:px-8"
             style={{ fontFamily: 'Poppins, sans-serif' }}
         >
             {/* ✅ FIX: Replaced next/image with <img> */}
             {/* ✅ FIX: Added responsive negative bottom positioning */}
             <img
-                src="/images/bar.png"
+                src="/images/story-section.png"
                 alt="Decorative gold wave background"
-                // Using negative bottom positioning as requested
-                // Added 2xl breakpoint as well
-                className="absolute bottom-[30%] sm:-bottom-[10%] md:bottom-[-30%] lg:-bottom-[0%] xl:-bottom-[0%] 2xl:-bottom-[70%] left-0 right-0 w-full h-auto object-cover object-bottom
-                 z-0"
+
+                // ✅ FIX: Replaced all "bottom-[...]" classes with true vertical centering
+                // ✅ FIX: Changed "object-bottom" to "object-center"
+                className="absolute
+                           top-1/2 left-0 right-0 -translate-y-1/2
+                           w-full h-auto
+                           object-fill object-center z-0"
             />
 
             {/* RESPONSIVE: Changed max-w-[1920px] to max-w-7xl to align with other sections */}

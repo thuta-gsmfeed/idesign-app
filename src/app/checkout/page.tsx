@@ -218,7 +218,7 @@ export default function CheckoutPage() {
                         {/* Express Checkout */}
                         <div className="mb-8 mt-8 lg:mt-0"> {/* Add margin-top for mobile */}
                             <h2 className="text-lg font-medium mb-3">Express checkout</h2>
-                            <button className="w-full h-12 bg-black text-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90">
+                            <button className="w-full h-12 bg-white border-2 text-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90">
                                 <img
                                     src="/images/g-pay.svg"
                                     alt="Google Pay"
@@ -239,7 +239,7 @@ export default function CheckoutPage() {
                             <div className="space-y-6">
                                 {/* Contact */}
                                 <section>
-                                    <h2 className="text-lg font-medium mb-3">Contact</h2>
+                                    <h2 className="text-lg font-medium mb-5">Contact</h2>
                                     <Input label="Email" placeholder="Enter your email" id="email" type="email" />
                                     <div className="mt-3 flex items-center">
                                         <input type="checkbox" id="newsletter" className="h-4 w-4 text-blue-600 border-gray-300 rounded" />
@@ -249,7 +249,7 @@ export default function CheckoutPage() {
 
                                 {/* Delivery */}
                                 <section>
-                                    <h2 className="text-lg font-medium mb-3">Delivery</h2>
+                                    <h2 className="text-lg font-medium mb-5">Delivery</h2>
                                     <div className="space-y-5">
                                         <Select label="Country/Region" id="country">
                                             <option value="" disabled>Select a country</option>
