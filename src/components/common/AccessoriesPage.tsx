@@ -175,8 +175,11 @@ export default function AccessoriesPage() {
                     </div>
 
                     {/* Important Notes */}
-                    <div className="space-y-2 text-sm text-gray-700">
-                        {/* ... (notes) ... */}
+                    <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        <p className="font-medium">Important Notes:</p>
+                        <p className="italic">*Please upload your logo in Vector/PNG format. (2MP Max)</p>
+                        <p className="italic">*Our design experts will refine your logo before production.</p>
+                        <p className="italic">*Once you place your order, our team will contact you via email or phone to confirm the final design details.</p>
                     </div>
                 </div>
             </div>
