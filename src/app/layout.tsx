@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     openGraph: {
         title: "IDesignGold | Luxury Custom iPhones & Bespoke Technology",
         description: "Experience the pinnacle of personalized luxury. IDesignGold crafts exquisite 24k gold iPhones and bespoke tech for discerning clients.",
-        url: "https://idesign-app.vercel.app/",
+        url: "https://idesign-app.vercel.app",
         siteName: "IDesignGold",
         images: [
             {
                 // --- (FIXED) ---
                 // Changed from "/images/Thumbnail.jpg" to the full, absolute URL
-                url: "https://idesign-app.vercel.app//images/Thumbnail.jpg",
+                url: "https://idesign-app.vercel.app/images/Thumbnail.jpg",
                 width: 1200,
                 height: 630,
                 alt: "IDesignGold Luxury Custom iPhone",
