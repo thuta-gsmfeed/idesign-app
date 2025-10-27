@@ -132,7 +132,7 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="px-4 py-4 rounded-2xl transition duration-150 ease-in-out"
+                            className="px-3 py-3 rounded-2xl transition duration-150 ease-in-out"
                             style={{
                                 backgroundColor: '#f8f5ee',
                                 color: '#a08d53',
