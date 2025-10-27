@@ -62,7 +62,7 @@ const AsSeenInSection = () => {
 
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
                 <motion.h2
-                    className="text-center text-[25px] md:text-3xl tracking-wide mb-12 dark:text-[#EBB639]"
+                    className="text-center text-[20px] md:text-2xl tracking-wide mb-12 dark:text-[#EBB639]"
                     style={{ color: "#ae8b3b" }}
                     variants={headingVariants}
                     initial="hidden"

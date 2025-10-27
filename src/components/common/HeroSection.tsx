@@ -3,7 +3,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { motion, Variants } from "framer-motion"; // ✅ add Variants here
+import { motion, Variants } from "framer-motion";
+import Link from "next/link"; // ✅ add Variants here
 
 // ✅ Type variants as Variants
 const containerVariants: Variants = {
@@ -99,20 +100,24 @@ const HeroSection = () => {
                         className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start"
                         variants={itemVariants}
                     >
-                        <Button
-                            className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
-                            style={{ fontFamily: "Poppins, sans-serif" }}
-                        >
-                            Shop iPhone
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
-                        <Button
-                            className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
-                            style={{ fontFamily: "Poppins, sans-serif" }}
-                        >
-                            Shop Accessories
-                            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Button>
+                        <Link href="/iphones">
+                            <Button
+                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
+                                style={{ fontFamily: "Poppins, sans-serif" }}
+                            >
+                                Shop iPhone
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
+                        <Link href="/accessories">
+                            <Button
+                                className="group bg-[#f5f1e7] text-[#ae8b3b] px-8 py-4 text-sm transition-all duration-300 hover:shadow-xl hover:bg-[#ae8b3b] hover:text-[#f5f1e7] flex justify-between"
+                                style={{ fontFamily: "Poppins, sans-serif" }}
+                            >
+                                Shop Accessories
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </div>

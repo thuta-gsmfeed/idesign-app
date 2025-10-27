@@ -88,7 +88,7 @@ export default function ProcessSection() {
                     viewport={{ once: true }}
                 >
                     {/* --- RESPONSIVE HEADING --- */}
-                    <h2 className="text-4xl font-bold text-[#ae8b3b] sm:text-[50px] dark:text-[#EBB639]">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ae8b3b] dark:text-[#EBB639]">
                         Our Process
                     </h2>
                     {/* --- Used standard text-base class --- */}

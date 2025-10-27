@@ -108,7 +108,7 @@ export default function TrustedSection() {
 
         const timer = setInterval(nextSlide, 5000);
         return () => clearInterval(timer);
-    }, [visibleCards, testimonials.length]); // Added testimonials.length dependency
+    }, [visibleCards]); // Added testimonials.length dependency
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);

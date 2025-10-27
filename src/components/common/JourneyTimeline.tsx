@@ -36,7 +36,7 @@ export default function JourneyTimeline() {
                     variants={itemVariants}
                 >
                     <div className="text-center mb-12">
-                        <h1 className="text-5xl text-[#ae8b3b] dark:text-[#EBB639] mb-6">Our Journey</h1>
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-[#ae8b3b] dark:text-[#EBB639]">Our Journey</h1>
                         <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
                             From a small creative studio in 2016 to a global brand serving high-profile personalities across
                             continents, IDG has become a symbol of prestige in personal technology.
@@ -53,7 +53,8 @@ export default function JourneyTimeline() {
                     <blockquote
                         className="text-2xl md:text-3xl lg:text-4xl italic font-semibold leading-tight mb-10"
                         style={{
-                            backgroundImage: "linear-gradient(#AE8B3B, #EBB639, #D98D12, #C08D41)",
+                            backgroundImage:
+                                "linear-gradient(-45deg, #AE8B3B 0%, #EBB639 40%, #D98D12 55%, #C08D41 100%)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
                         }}

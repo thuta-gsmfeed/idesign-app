@@ -30,7 +30,7 @@ const FeatureTextCard = ({ title, paragraphs }: { title: string, paragraphs: str
     <div
         className="
             rounded-2xl bg-gradient-to-br from-[#FBF9F3]/90 to-[#F5F2E8]/90
-            backdrop-blur-sm shadow-2xl
+            backdrop-blur-sm shadow-lg
             p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 2xl:p-12
             w-full
             max-w-[500px] sm:max-w-[550px] md:max-w-[650px]
@@ -61,7 +61,7 @@ const FeatureImage = ({ src, alt }: { src: string, alt: string }) => (
             src={src}
             alt={alt}
             className="
-                rounded-2xl shadow-2xl object-cover
+                rounded-2xl shadow-xl object-cover
                 w-full
                 max-w-[500px] /* MODIFIED: Matched card's mobile max-width */
                 sm:max-w-[550px] /* MODIFIED: Matched card's mobile max-width */

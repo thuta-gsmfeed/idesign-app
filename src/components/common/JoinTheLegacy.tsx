@@ -19,7 +19,7 @@ export default function JoinTheLegacy() {
                 viewport={{ once: true, amount: 0.2 }}
             >
                 <div className="text-center mb-12">
-                    <h2 className="text-5xl text-[#ae8b3b] dark:text-[#EBB639] mb-6">Join The Legacy</h2>
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-[#ae8b3b] dark:text-[#EBB639]">Join The Legacy</h2>
                     <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
                         Our goal is simple — to make luxury personal again. Whether you&#39;re a global celebrity or a passionate
                         individual with an eye for perfection, IDG invites you to design the device that defines you.
