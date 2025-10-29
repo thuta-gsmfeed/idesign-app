@@ -3,12 +3,40 @@
 import { useCart } from '@/context/CartContext';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-// --- (NEW) Import ChevronDown icon ---
-import { CreditCard, Lock, ChevronDown } from 'lucide-react';
-// import { footer } from "motion/react-client"; // This import seems incorrect, removing it.
+import React, { useState } from 'react'; // Added React import
+import { ChevronDown } from 'lucide-react';
 
-// --- (MODIFIED) Reusable Form Components ---
+// --- (FIX) Mocking Next.js and Context components for preview ---
+
+// 1. Mock useCart hook
+// const useCart = () => ({
+//     cartItems: [
+//         { id: '1', name: 'Custom iPhone 15 Pro', image: 'https://placehold.co/64x80/ae8b3b/f5f1e7?text=iPhone', color: 'Gold', storage: '256GB', price: 1299.99, quantity: 1 },
+//         { id: '2', name: 'Custom Samsung S24 Ultra', image: 'https://placehold.co/64x80/333/FFF?text=Samsung', color: 'Titanium Black', storage: '512GB', price: 1499.99, quantity: 1 },
+//     ],
+//     subtotal: 2799.98,
+//     // Add any other functions/values you use from context
+// });
+
+// 2. Mock next/image component
+// We have to use a standard <img> tag for the preview environment
+// The `...props` will catch width, height, src, alt, className
+// const Image = (props: any) => {
+//     // eslint-disable-next-line @next/next/no-img-element
+//     return <img {...props} alt={props.alt || ''} />;
+// };
+
+// 3. Mock next/link component
+// Renders a simple <a> tag
+// const Link = ({ href, children, ...props }: { href: string, children: React.ReactNode, [key: string]: any }) => {
+//     return (
+//         <a href={href} {...props}>
+//             {children}
+//         </a>
+//     );
+// };
+// --- End of Mocks ---
+
 
 const Input = ({ label, placeholder, id, type = 'text' }: { label: string, placeholder: string, id: string, type?: string }) => (
     <div className="relative">
@@ -21,7 +49,6 @@ const Input = ({ label, placeholder, id, type = 'text' }: { label: string, place
         />
         <label
             htmlFor={id}
-            // --- (MODIFIED) Added dark:bg-white. Adjust if your dark mode body is different. ---
             className="absolute left-3.5 -top-2.5 text-sm text-gray-600 bg-white dark:bg-white px-1
                  transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base
                  peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-blue-600"
@@ -43,7 +70,6 @@ const Select = ({ label, id, children }: { label: string, id: string, children: 
         </select>
         <label
             htmlFor={id}
-            // --- (MODIFIED) Added dark:bg-white. ---
             className="absolute left-3.5 -top-2.5 text-sm text-gray-600 bg-white dark:bg-white px-1"
         >
             {label}
@@ -56,7 +82,6 @@ const Select = ({ label, id, children }: { label: string, id: string, children: 
     </div>
 );
 
-// ... (ShippingOption component - no changes) ...
 const ShippingOption = ({ id, label, price, checked, onChange }: { id: string, label: string, price: string, checked: boolean, onChange: () => void }) => (
     <div
         className={`flex justify-between items-center p-4 border rounded-lg cursor-pointer
@@ -82,14 +107,12 @@ const ShippingOption = ({ id, label, price, checked, onChange }: { id: string, l
 export default function CheckoutPage() {
     const { cartItems, subtotal } = useCart();
     const [shippingMethod, setShippingMethod] = useState('custom');
-    // --- (NEW) State for mobile summary ---
     const [isSummaryOpen, setIsSummaryOpen] = useState(false);
 
     const shippingCost = shippingMethod === 'custom' ? 0.00 : 6.95;
     const total = subtotal + shippingCost;
 
     // --- (NEW) Reusable Order Summary Component ---
-    // This avoids duplicating code and logic
     const OrderSummary = ({ isMobile = false }: { isMobile?: boolean }) => (
         <div className={isMobile ? "bg-gray-50 dark:bg-gray-800 p-4" : "max-w-md mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 lg:sticky lg:top-0"}>
             {/* Cart Items */}
@@ -219,12 +242,13 @@ export default function CheckoutPage() {
                         <div className="mb-8 mt-8 lg:mt-0"> {/* Add margin-top for mobile */}
                             <h2 className="text-lg font-medium mb-3">Express checkout</h2>
                             <button className="w-full h-12 bg-white border-2 text-white rounded-lg flex items-center justify-center transition-opacity hover:opacity-90">
-                                <img
+                                {/* --- (FIXED) Replaced <img> with <Image> --- */}
+                                <Image
                                     src="/images/g-pay.svg"
                                     alt="Google Pay"
                                     width={32}
                                     height={20}
-                                    className="w-8 h-5 object-contain text-white"
+                                    className="w-8 h-5 object-contain"
                                 />
                             </button>
                         </div>
@@ -308,7 +332,8 @@ export default function CheckoutPage() {
                                             {/* --- (MODIFIED) Replaced SVGs with your images --- */}
                                             <div className="flex flex-wrap gap-2">
                                                 <div className="px-2 py-1 bg-white border border-gray-200 dark:bg-gray-700 rounded-md">
-                                                    <img
+                                                    {/* --- (FIXED) Replaced <img> with <Image> --- */}
+                                                    <Image
                                                         src="/images/visa.svg"
                                                         alt="Visa"
                                                         width={32}
@@ -317,7 +342,8 @@ export default function CheckoutPage() {
                                                     />
                                                 </div>
                                                 <div className="px-2 py-1 bg-white border border-gray-200 dark:bg-gray-700 rounded-md">
-                                                    <img
+                                                    {/* --- (FIXED) Replaced <img> with <Image> --- */}
+                                                    <Image
                                                         src="/images/master-card.svg"
                                                         alt="Mastercard"
                                                         width={32}
@@ -326,7 +352,8 @@ export default function CheckoutPage() {
                                                     />
                                                 </div>
                                                 <div className="px-2 py-1 bg-white border border-gray-200 dark:bg-gray-700 rounded-md">
-                                                    <img
+                                                    {/* --- (FIXED) Replaced <img> with <Image> --- */}
+                                                    <Image
                                                         src="/images/apple-pay.svg"
                                                         alt="Apple Pay"
                                                         width={32}
@@ -335,7 +362,8 @@ export default function CheckoutPage() {
                                                     />
                                                 </div>
                                                 <div className="px-2 py-1 bg-white border border-gray-200 dark:bg-gray-700 rounded-md">
-                                                    <img
+                                                    {/* --- (FIXED) Replaced <img> with <Image> --- */}
+                                                    <Image
                                                         src="/images/g-pay.svg"
                                                         alt="Google Pay"
                                                         width={32}
@@ -371,7 +399,7 @@ export default function CheckoutPage() {
                                 <Link href="/refund-policy" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600">Refund policy</Link>
                                 <Link href="/shipping" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600">Shipping policy</Link>
                                 <Link href="/privacy" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600">Privacy policy</Link>
-                                <Link href="/terms" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600">Terms of service</Link>
+                                Vindemiatrix                                <Link href="/terms" className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600">Terms of service</Link>
                             </nav>
                         </footer>
                     </div>
@@ -386,3 +414,4 @@ export default function CheckoutPage() {
         </div>
     );
 }
+

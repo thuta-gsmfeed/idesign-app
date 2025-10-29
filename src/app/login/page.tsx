@@ -5,9 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
-// --- FIX: Replaced Next.js components with standard HTML ---
-// import Image from "next/image";
-// import Link from "next/link";
+import Image from "next/image"; // Added next/image import
 
 const LoginPage = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -21,8 +19,8 @@ const LoginPage = () => {
 
             {/* --- CHANGE 2: Logo moved outside and above the main card --- */}
             <div className="flex justify-center mb-6">
-                {/* --- FIX: Replaced <Image> with <img> --- */}
-                <img
+                {/* --- FIX: Replaced <img> with <Image> --- */}
+                <Image
                     src="/images/logo-od.png"
                     alt="IDG Logo"
                     width={90}
@@ -85,13 +83,13 @@ const LoginPage = () => {
 
                 {/* Links */}
                 <div className="mt-4">
-                    {/* --- FIX: Replaced <Link> with <a> --- */}
-                    <a
+                    {/* --- FIX: Replaced <a> with <Link> for consistency --- */}
+                    <Link
                         href="#"
                         className="text-sm text-gray-600 hover:underline"
                     >
                         Forgotten your password?
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Divider */}
@@ -106,8 +104,8 @@ const LoginPage = () => {
                     type="button"
                     className="flex items-center justify-center w-full rounded-xl py-3 hover:bg-gray-200 transition"
                 >
-                    {/* --- FIX: Replaced <Image> with <img> --- */}
-                    <img
+                    {/* --- FIX: Replaced <img> with <Image> --- */}
+                    <Image
                         src="/images/google.svg"
                         alt="Google"
                         width={20}
@@ -122,7 +120,6 @@ const LoginPage = () => {
                 {/* Sign Up */}
                 <p className="text-sm text-gray-600 mt-6">
                     Don’t have an account?{" "}
-                    {/* --- FIX: Replaced <Link> with <a> --- */}
                     <Link href="/sign-up" className="text-[#ae8b3b] font-bold hover:underline">
                         Sign Up
                     </Link>
@@ -134,4 +131,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
