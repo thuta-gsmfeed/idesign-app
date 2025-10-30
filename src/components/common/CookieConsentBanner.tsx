@@ -56,7 +56,7 @@ export default function CookieConsentBanner(): React.ReactElement | null {
         applying just a blur effect to the page content.
       */}
             <div
-                className="fixed inset-0 z-40 backdrop-blur-sm"
+                className="fixed inset-0 z-40"
                 aria-hidden="true"
             ></div>
 
